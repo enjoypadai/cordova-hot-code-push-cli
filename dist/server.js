@@ -107,7 +107,7 @@
         localUrl = 'http://localhost:' + assetPort;
 
     // If a lot of files changes at the same time, we only want to trigger the change event once.
-    handleFileChange = _.debounce(handleFileChange, 500);
+    //handleFileChange = _.debounce(handleFileChange, 500);
 
     try {
       killCaches(app);
