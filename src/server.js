@@ -179,16 +179,11 @@
         ngrok = require('ngrok');
 
     // And make it accessible from the internet
-    ngrok.connect(port, function (err, url) {
-      if (err) {
-        publicTunnelDfd.reject(err);
-        return console.log('Could not create tunnel: ', err);
-      }
-
-      updateLocalEnv({content_url: url});
-
+    (async function() {
+      const url = await ngrok.connect(port);
+      updateLocalEnv({ content_url: url });
       publicTunnelDfd.resolve(url);
-    });
+    })();
 
 
     return publicTunnelDfd.promise;
