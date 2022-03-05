@@ -36,7 +36,7 @@ npm install -g cordova-hot-code-push-cli
 
 It is also possible to install via repo url directly (__unstable__):
 ```sh
-npm install -g https://github.com/nordnet/cordova-hot-code-push-cli.git
+npm install -g https://github.com/dhaneeshtb/cordova-hot-code-push-cli.git
 ```
 
 ### How to use
